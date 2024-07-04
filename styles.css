@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+#rubik-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    grid-template-areas: 
+        ". top-face . ."
+        "left-face front-face right-face back-face"
+        ". bottom-face . .";
+}
+
+.face {
+    display: grid;
+    grid-template-columns: repeat(3, 30px);
+    grid-template-rows: repeat(3, 30px);
+    gap: 2px;
+}
+
+.face div {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+#top-face { grid-area: top-face; }
+#left-face { grid-area: left-face; }
+#front-face { grid-area: front-face; }
+#right-face { grid-area: right-face; }
+#back-face { grid-area: back-face; }
+#bottom-face { grid-area: bottom-face; }
